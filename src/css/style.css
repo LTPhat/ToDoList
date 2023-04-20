@@ -1,0 +1,161 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: black;
+}
+
+.offscreen {
+    text-align: center;
+    font-style: italic;
+    font-family: cursive;
+    padding: 30px;
+    font-size: 40px;
+}
+
+input, 
+button {
+    font: inherit;
+}
+
+html {
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    min-height: 100vh;
+    background: #30e8bf; /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #30e8bf, #ff8235); /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #30e8bf, #ff8235); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    color: #fff;
+    padding: 1rem;
+    display: flex;
+    flex-direction: flex-end;
+}
+
+main {
+    flex-grow: 1;
+    margin: auto;
+    width: 100%;
+    max-width: 800px;
+    display: flex;
+    flex-flow: column nowrap;
+}
+
+section {
+    border: 4px groove whitesmoke;
+    border-radius: 10px;
+    padding: 0.5rem;
+}
+
+.button {
+    border-radius: 10px;
+    min-width: 48px;
+    min-height: 48px;
+}
+
+.button:hover {
+    cursor: pointer;
+}
+
+.newItemEntry {
+    position: sticky;
+    top: 0;
+    margin-bottom: 1rem;
+}
+
+.newItemEntry__form {
+    display: flex;
+    gap: 1rem;
+    font-size: 1.5rem;
+}
+
+.newItemEntry__input {
+    width: calc(100% - (0.25rem + 48px));
+    flex-grow: 1;
+    border: 2px solid whitesmoke;
+    border-radius: 10px;
+    padding: 0.8rem;
+}
+
+.newItemEntry__button {
+    background-color: transparent;
+    color: whitesmoke;
+    border: 3px dashed whitesmoke;
+    /* margin: 0.5rem; */
+}
+
+.newItemEntry__button:hover,
+.newItemEntry__button:focus {
+    color: limegreen;
+}
+
+.listContainer {
+    font-size: 1.5rem;
+    flex-grow: 1;
+    display: flex;
+    flex-flow: column;
+    gap: 1rem;
+}
+
+.listTitle {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+
+.listTitle__button {
+    background-color: transparent;
+    padding: 0.25em;
+}
+
+.listTitle__button:hover{
+    background-color: red;
+    transfrom: translateY(10px)
+}
+
+.listItems {
+    flex-grow: 1;
+    display: flex;
+    flex-flow: column nowrap;
+    list-style-type: none;
+}
+
+.item {
+    display: flex;
+    align-items: center;
+    padding-top: 1em;
+    gap: 1em;
+}
+
+.item > input[type="checkbox"] {
+    text-align: center;
+    min-width: 2.5rem;
+    min-height: 2.5rem;
+    cursor: pointer;
+}
+
+.item > input[type="checkbox"]:checked + label {
+    text-decoration: line-through;
+}
+
+.item > label {
+    flex-grow: 1;
+    word-break: break-all;
+}
+
+.item > button:hover, 
+.item > button:focus {
+    background-color: red;
+}
+
+@media (max-width: 768px) {
+    section {
+        padding: 1rem;
+    }
+    .newItemEntry__form {
+        gap: 0.5rem;
+    }
+}
