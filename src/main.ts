@@ -16,6 +16,7 @@ const initApp = (): void =>{
         // Get new item
         const input = document.getElementById("newItem") as HTMLInputElement
         const entryText: string = input.value.trim()
+        input.value = ""
         if (!entryText.length) return 
         
         // Calculate item ID
